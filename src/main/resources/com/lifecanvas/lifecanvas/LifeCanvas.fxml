@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.lifecanvas.lifecanvas.Card?>
+
+<AnchorPane prefHeight="900.0"
+            prefWidth="1100.0"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.lifecanvas.lifecanvas.LifeCanvasController">
+    <style>
+        -fx-background-color: #121212;
+    </style>
+    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <style>
+            -fx-padding: 20;
+            -fx-spacing: 25;
+        </style>
+        <HBox AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0">
+            <style>
+                -fx-spacing: 10;
+            </style>
+            <Button text="New Experience" fx:id="newExperienceButton" onMouseClicked="#onNewExperienceClick">
+                <style>
+                    -fx-padding: 13;
+                    -fx-background-color: #D0BCFF;
+                    -fx-font-weight: bold;
+                    -fx-font-size: 15;
+                    -fx-background-radius: 50;
+                    -fx-text-fill: #381E72;
+                </style>
+            </Button>
+            <TextField prefHeight="47.0" prefWidth="391.0" promptText="Search">
+                <style>
+                    -fx-padding: 13;
+                    -fx-background-color: #2B2930;
+                    -fx-background-radius: 50;
+                    -fx-font-size: 15;
+                    -fx-text-fill: #CAC4D0;
+                </style>
+            </TextField>
+        </HBox>
+        <GridPane fx:id="postGrid">
+            <style>
+                -fx-vgap: 10;
+                -fx-hgap: 10;
+            </style>
+        </GridPane>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="800.0" prefWidth="600.0"
+            stylesheets="@newExperience.css"
+            fx:controller="com.lifecanvas.lifecanvas.NewExperienceController">
+    <VBox AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0"
+          AnchorPane.bottomAnchor="0.0"
+          styleClass="vbox">
+        <Label text="Title" styleClass="label" />
+        <TextField promptText="Lorem ipsum dolor sit amet" styleClass="text-field" fx:id="titleField"/>
+        <Label text="Tags" styleClass="label" />
+        <TextField promptText="Happy, Sad, Bittersweet" styleClass="text-field" fx:id="emotionsField"/>
+        <TextArea promptText="Speak your thoughts" styleClass="text-area" prefHeight="500" fx:id="contentField"/>
+        <Button text="Save" styleClass="button" prefWidth="100" onMouseClicked="#onSave"/>
+    </VBox>
+</AnchorPane>

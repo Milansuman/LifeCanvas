@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+
+<fx:root type="javafx.scene.control.Label" xmlns:fx="http://javafx.com/fxml">
+    <style>
+        -fx-background-color: #4A4458;
+        -fx-padding: 13;
+        -fx-background-radius: 50;
+        -fx-font-weight: bold;
+        -fx-text-fill: #E8DEF8;
+    </style>
+</fx:root>

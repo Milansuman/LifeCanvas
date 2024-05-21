@@ -1,0 +1,76 @@
+
+.root {
+    -fx-background-color: #121212;
+}
+
+.button{
+    -fx-padding: 13;
+    -fx-background-color: #D0BCFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+    -fx-background-radius: 50;
+    -fx-text-fill: #381E72;
+}
+
+.vbox {
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+.label {
+    -fx-text-fill: #CAC4D0;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-padding: 15;
+    -fx-background-color: #36343B;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #CAC4D0;
+    -fx-text-fill: #E6E0E9;
+    -fx-font-size: 17;
+}
+
+.text-field:focused{
+    -fx-border-color: #D0BCFF;
+}
+
+.text-area {
+    -fx-padding: 15;
+    -fx-background-color: #36343B;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #CAC4D0;
+    -fx-text-fill: #E6E0E9;
+    -fx-prompt-text-fill: #E6E0E9;
+    -fx-font-size: 17;
+}
+
+.text-area:focused{
+    -fx-border-color: #D0BCFF;
+}
+
+.text-area .content{
+    -fx-background-color: #36343B;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.text-area:focused .content{
+    -fx-background-color: #36343B;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: null;
+}
+.text-area .scroll-pane .scroll-bar:horizontal {
+    -fx-background-radius: 0 0 2 2;
+}
+.text-area .scroll-pane .scroll-bar:vertical {
+    -fx-background-radius: 0 2 2 0;
+}
+.text-area .scroll-pane .corner {
+    -fx-background-radius: 0 0 2 0;
+}
