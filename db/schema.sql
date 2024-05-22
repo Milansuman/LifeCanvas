@@ -19,3 +19,6 @@ CREATE TABLE lifecanvas.emotions (
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE lifecanvas.emotions DROP FOREIGN KEY emotions_experiences_FK;
+ALTER TABLE lifecanvas.emotions ADD CONSTRAINT emotions_experiences_FK FOREIGN KEY (experience_id) REFERENCES lifecanvas.experiences(id);
