@@ -29,6 +29,21 @@ public class SaveSystem {
         eventSource.triggerUpdate();
     }
 
+    public static void deleteExperience(String title, String description){
+        for(Experience experience: experiences){
+            if(experience.title.equals(title) && experience.content.equals(description)){
+                try{
+                    db.deleteExperience(experience);
+                }catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
+                experiences.remove(experience);
+                eventSource.triggerUpdate();
+                break;
+            }
+        }
+    }
+
     public static void saveExperiences(){
         try{
             db.commitExperiences(experiences);

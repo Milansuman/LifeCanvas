@@ -31,7 +31,7 @@
                     -fx-text-fill: #381E72;
                 </style>
             </Button>
-            <TextField prefHeight="47.0" prefWidth="391.0" promptText="Search">
+            <TextField prefHeight="47.0" prefWidth="391.0" promptText="Search" onKeyTyped="#onSearchChanged" fx:id="search">
                 <style>
                     -fx-padding: 13;
                     -fx-background-color: #2B2930;

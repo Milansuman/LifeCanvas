@@ -36,6 +36,17 @@ public class Database {
         }
     }
 
+    public void deleteExperience(Experience experience) throws SQLException{
+        PreparedStatement deleteEmotionsStatement = this.conn.prepareStatement("delete from `emotions` where `experience_id`=?;");
+        PreparedStatement deleteExperienceStatement = this.conn.prepareStatement("delete from `experiences` where `id`=?;");
+
+        deleteEmotionsStatement.setInt(1, experience.id);
+        deleteEmotionsStatement.execute();
+
+        deleteExperienceStatement.setInt(1, experience.id);
+        deleteExperienceStatement.execute();
+    }
+
     public void updateEmotions(Experience experience) throws SQLException{
         PreparedStatement deleteEmotions = this.conn.prepareStatement("delete from `emotions` where `experience_id`=?;");
         PreparedStatement insertEmotion = this.conn.prepareStatement("insert into `emotions` (`emotion`, `experience_id`) values (?,?);");

@@ -36,4 +36,14 @@
             -fx-spacing: 10;
         </style>
     </HBox>
+    <Button text="delete" fx:id="delete">
+        <style>
+            -fx-padding: 13;
+            -fx-background-color: #633B48;
+            -fx-font-weight: bold;
+            -fx-font-size: 15;
+            -fx-background-radius: 50;
+            -fx-text-fill: #FFD8E4;
+        </style>
+    </Button>
 </fx:root>

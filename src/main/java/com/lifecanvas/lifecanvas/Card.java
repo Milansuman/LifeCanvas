@@ -1,10 +1,12 @@
 package com.lifecanvas.lifecanvas;
 
 import javafx.beans.property.StringProperty;
+import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
+import javafx.event.Event;
 import javafx.scene.control.Label;
 
 import java.util.ArrayList;
@@ -19,6 +21,9 @@ public class Card extends VBox{
     @FXML
     private HBox tags;
 
+    @FXML
+    private Button delete;
+
     public Card(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Card.fxml"));
         loader.setRoot(this);
@@ -26,6 +31,7 @@ public class Card extends VBox{
 
         try{
             loader.load();
+            delete.setOnMouseClicked(this::handleDeleteEvent);
         }catch (Exception e){
             throw new RuntimeException(e);
         }
@@ -61,5 +67,9 @@ public class Card extends VBox{
             tag.setText(emotion);
             this.tags.getChildren().add(tag);
         }
+    }
+
+    public void handleDeleteEvent(Event event){
+        SaveSystem.deleteExperience(this.getTitle(), this.getDescription());
     }
 }
